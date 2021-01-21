@@ -1,0 +1,33 @@
+html {
+  --dark-black: #222222;
+  --light-black: #333333;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--light-black);
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.flex-container {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.card {
+  height: 400px;
+  min-width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #fff;
+}
