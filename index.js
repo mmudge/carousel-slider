@@ -55,11 +55,16 @@ const flexContainer = app.querySelector('.flex-container')
 function updateCardsHTML(cards) {
   const oldCards = document.querySelectorAll('.card')
   for (const card of oldCards) {
+    card.classList.remove('active')
     card.remove()
   }
 
   cards.forEach((activeCard) => {
-    flexContainer.insertAdjacentElement('beforeend', card(activeCard))
+    const newCard = card(activeCard)
+    flexContainer.insertAdjacentElement('beforeend', newCard)
+    setTimeout(() => {
+      newCard.classList.add('active')
+    }, 500)
   })
 }
 
@@ -67,19 +72,20 @@ let upperLimit = 3
 let lowerLimit = 0
 
 function updateActiveCards() {
-  const activeCards = cards.slice(lowerLimit, upperLimit)
-  updateCardsHTML(activeCards)
-  if (upperLimit < 10) {
+  if (upperLimit < 9) {
     lowerLimit = upperLimit
     upperLimit += 3
   } else {
     lowerLimit = 0
     upperLimit = 3
   }
+
+  const activeCards = cards.slice(lowerLimit, upperLimit)
+  updateCardsHTML(activeCards)
 }
 
 updateActiveCards()
 
 setInterval(() => {
   updateActiveCards()
-}, 3000)
+}, 4000)

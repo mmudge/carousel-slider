@@ -5,6 +5,7 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
@@ -21,7 +22,6 @@ body {
 
 .flex-container {
   display: flex;
-  overflow-x: scroll;
 }
 
 .card:nth-child(2) {
@@ -31,10 +31,14 @@ body {
 .card {
   min-width: 300px;
   padding: 30px;
-  /* margin: 0 20px; */
   background-color: #fff;
   border-radius: 3px;
-  font-family: 'Montserrat', sans-serif;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.card.active {
+  opacity: 1;
 }
 
 .card > p {
