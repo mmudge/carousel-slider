@@ -1,5 +1,6 @@
 import { appWrapper } from './components/appWrapper.js'
 import { card } from './components/card.js'
+import { createElementFromHTML } from './helpers/createElementFromHTML.js'
 
 const app = document.getElementById('app')
 app.insertAdjacentElement('afterbegin', appWrapper())
@@ -88,6 +89,12 @@ function updateActiveCards() {
 
 updateActiveCards()
 
-// setInterval(() => {
-//   updateActiveCards()
-// }, 8000)
+setInterval(() => {
+  updateActiveCards()
+}, 8000)
+
+// const circle = createElementFromHTML(`
+//   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+//     <circle cx="50" cy="50" r="50"/>
+//   </svg>
+// `)
