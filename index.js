@@ -6,46 +6,47 @@ app.insertAdjacentElement('afterbegin', appWrapper())
 
 const randomNumber = () => Math.floor(Math.random() * Math.floor(5))
 const url = 'https://www.nps.gov'
+const name = 'Learn more'
 
 const cards = [
-  { title: 'Zion', name: 'Andrea K.', rating: randomNumber(), link: { name: 'Visit now', url } },
-  { title: 'Arches', name: 'Mike T.', rating: randomNumber(), link: { name: 'Visit now', url } },
+  { title: 'Zion', name: 'Andrea K.', rating: randomNumber(), link: { name, url } },
+  { title: 'Arches', name: 'Mike T.', rating: randomNumber(), link: { name, url } },
   {
     title: 'Bryce Canyon',
     name: 'Frank R.',
     rating: randomNumber(),
-    link: { name: 'Visit now', url },
+    link: { name, url },
   },
   {
     title: 'Yosemite',
     name: 'Julia F.',
     rating: randomNumber(),
-    link: { name: 'Visit now', url },
+    link: { name, url },
   },
   {
     title: 'Grand Teton',
     name: 'Sam L.',
     rating: randomNumber(),
-    link: { name: 'Visit now', url },
+    link: { name, url },
   },
   {
     title: 'Yellowstone',
     name: 'Jake V.',
     rating: randomNumber(),
-    link: { name: 'Visit now', url },
+    link: { name, url },
   },
   {
     title: 'Rocky Mountain',
     name: 'David D.',
     rating: randomNumber(),
-    link: { name: 'Visit now', url },
+    link: { name, url },
   },
-  { title: 'Olympic', name: 'Jimmy K.', rating: randomNumber(), link: { name: 'Visit now', url } },
+  { title: 'Olympic', name: 'Jimmy K.', rating: randomNumber(), link: { name, url } },
   {
     title: 'Canyon Lands',
     name: 'Ricky B.',
     rating: randomNumber(),
-    link: { name: 'Visit now', url },
+    link: { name, url },
   },
 ]
 
