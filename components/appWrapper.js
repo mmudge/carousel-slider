@@ -5,8 +5,8 @@ export function appWrapper() {
     <div class="wrapper">
       <div class="container">
         <h1>National Park ratings</h1>
-        <div class="flex-container">
-        </div>
+        <div class="cards-container"></div>
+        <div class="dots-container"></div>
       </div>
     </div>
   `)

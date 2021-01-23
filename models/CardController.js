@@ -53,8 +53,8 @@ export class CardController {
   upperLimit = 3
   lowerLimit = 0
 
-  get flexContainer() {
-    return document.querySelector('.flex-container')
+  get cardsContainer() {
+    return document.querySelector('.cards-container')
   }
 
   randomNumber() {
@@ -72,7 +72,7 @@ export class CardController {
 
     cards.forEach((activeCard) => {
       const newCard = card(activeCard)
-      this.flexContainer.insertAdjacentElement('beforeend', newCard)
+      this.cardsContainer.insertAdjacentElement('beforeend', newCard)
       setTimeout(() => {
         newCard.classList.add('active')
       }, 1500)
@@ -88,6 +88,10 @@ export class CardController {
       this.upperLimit = 3
     }
 
+    this.updateCards()
+  }
+
+  updateCards() {
     const activeCards = this.cards.slice(this.lowerLimit, this.upperLimit)
     this.updateCardsHTML(activeCards)
   }
@@ -98,5 +102,22 @@ export class CardController {
     setInterval(() => {
       this.updateActiveCards()
     }, 8000)
+  }
+
+  changeActiveCards(index) {
+    if (index === 0) {
+      this.lowerLimit = 0
+      this.upperLimit = 3
+    } else if (index === 1) {
+      this.lowerLimit = 3
+      this.upperLimit = 6
+    } else if (index === 2) {
+      this.lowerLimit = 6
+      this.upperLimit = 9
+    }
+
+    console.log('changing active cards', this.lowerLimit, this.upperLimit)
+
+    this.updateCards()
   }
 }

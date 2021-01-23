@@ -1,13 +1,31 @@
 import { appWrapper } from './components/appWrapper.js'
 import { CardController } from './models/CardController.js'
+import { circle } from './components/circle.js'
 
 const app = document.getElementById('app')
 app.insertAdjacentElement('afterbegin', appWrapper())
 
-new CardController()
+const cardController = new CardController()
 
-// const circle = createElementFromHTML(`
-//   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-//     <circle cx="50" cy="50" r="50"/>
-//   </svg>
-// `)
+// const dotsContainer = document.querySelector('.dots-container')
+
+// for (let i = 0; i < 3; i++) {
+//   dotsContainer.insertAdjacentElement('beforeend', circle())
+// }
+
+// const dots = document.querySelectorAll('.dot')
+
+// console.log('dots selector', dots)
+
+// function handleDotClick(index) {
+//   console.log('handle dot click', index)
+//   cardController.changeActiveCards(index)
+// }
+
+// for (let i = 0; i < dots.length; i++) {
+//   console.log('adding dots event listener', dots[i])
+//   // dots[i].firstChild.addEventListener('click', handleDotClick(i))
+//   dots[i].addEventListener('click', () => {
+//     handleDotClick(i)
+//   })
+// }
