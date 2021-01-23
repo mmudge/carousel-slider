@@ -1,4 +1,3 @@
-import { createElementFromHTML } from './helpers/createElementFromHTML.js'
 import { appWrapper } from './components/appWrapper.js'
 import { card } from './components/card.js'
 
