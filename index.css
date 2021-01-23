@@ -93,10 +93,6 @@ h1 {
   margin: 0;
 }
 
-.card > p {
-  margin: 32px 0 16px 0;
-}
-
 .stars {
   display: flex;
   margin: 12px 0px 16px 0px;

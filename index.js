@@ -88,6 +88,6 @@ function updateActiveCards() {
 
 updateActiveCards()
 
-setInterval(() => {
-  updateActiveCards()
-}, 8000)
+// setInterval(() => {
+//   updateActiveCards()
+// }, 8000)
