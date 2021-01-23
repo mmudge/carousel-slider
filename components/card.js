@@ -16,20 +16,17 @@ function createStarsHTMLString(rating) {
 }
 
 export function card(cardInfo) {
-  console.log('card info rating', cardInfo.rating)
   const starsHTML = createStarsHTMLString(cardInfo.rating)
-  console.log('star html', starsHTML)
 
   return createElementFromHTML(`
-    <div class="card">
+    <a class="card" href="${cardInfo.link.url}" target="_blank">
       <h2>${cardInfo.title}</h2>
       <div class="stars">${starsHTML}</div>
       <h4>${cardInfo.name}</h4>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        incididunt ut labore et dolore magna aliqua.
       </p>
-    </div>
+    </a>
   `)
 }

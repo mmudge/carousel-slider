@@ -7,6 +7,9 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+a {
+  text-decoration: none;
+}
 
 .wrapper {
   min-height: 100vh;
@@ -43,6 +46,10 @@ h1 {
   position: absolute;
 }
 
+.card:hover {
+  box-shadow: 5px 5px 5px var(--dark-black);
+}
+
 @keyframes slidein {
   from {
     transform: translateX(150px);
@@ -76,23 +83,22 @@ h1 {
 }
 
 .card > h2 {
-  font-weight: bold;
+  font-weight: bolder;
   margin: 0;
 }
 
 .card > h4 {
-  font-weight: 500;
+  font-weight: bold;
   margin: 0;
-  padding-bottom: 12px;
 }
 
 .card > p {
-  margin: 0;
+  margin: 32px 0 16px 0;
 }
 
 .stars {
   display: flex;
-  padding: 16px 0px;
+  margin: 12px 0px 16px 0px;
 }
 
 .star {
