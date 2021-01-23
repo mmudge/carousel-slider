@@ -55,8 +55,10 @@ const flexContainer = app.querySelector('.flex-container')
 function updateCardsHTML(cards) {
   const oldCards = document.querySelectorAll('.card')
   for (const card of oldCards) {
-    card.classList.remove('active')
-    card.remove()
+    card.classList.add('not-active')
+    setTimeout(() => {
+      card.remove()
+    }, 200)
   }
 
   cards.forEach((activeCard) => {
@@ -64,7 +66,7 @@ function updateCardsHTML(cards) {
     flexContainer.insertAdjacentElement('beforeend', newCard)
     setTimeout(() => {
       newCard.classList.add('active')
-    }, 500)
+    }, 1500)
   })
 }
 
@@ -88,4 +90,4 @@ updateActiveCards()
 
 setInterval(() => {
   updateActiveCards()
-}, 4000)
+}, 8000)
